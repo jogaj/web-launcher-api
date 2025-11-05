@@ -1,0 +1,13 @@
+export const MSG_USERNAME_NOT_PROVIDED = 'Username not provided.';
+export const MSG_USER_NOT_FOUND = 'User not found.';
+export const MSG_GENERIC_ERROR = 'An error has ocurred.';
+export const MSG_APPLICATION_NOT_FOUND = 'Application not found.';
+export const MSG_APPLICATION_CREATED = 'Application created successfully.';
+export const MSG_APPLICATION_UPDATED = 'Application updated successfully.';
+export const MSG_APPLICATION_DELETED = 'Application deleted successfully.';
+export const MSG_SETTING_NOT_FOUND = 'Setting not found.';
+export const MSG_USERNAME_EXIST = 'Username already exists.';
+export const MSG_USER_CREATED = 'User created successfully.';
+export const MSG_INVALID_CREDENTIALS = 'Invalid credentials.';
+export const MSG_INVALID_TOKEN = 'Invalid token.';
+export const MSG_UNAUTHORIZED = 'Unauthorized.';
