@@ -1,5 +1,6 @@
 import dotenv from 'dotenv';
 import { Sequelize } from 'sequelize';
+import pg from 'pg';
 
 dotenv.config();
 
@@ -26,6 +27,7 @@ const sequelize = new Sequelize(
 	{
 		host: 'aws-1-us-east-1.pooler.supabase.com',
 		dialect: 'postgres',
+		dialectModule: pg
 	},
 );
 
