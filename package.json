@@ -9,6 +9,7 @@
 		"dev-remote": "nodemon dist/index.js --host 0.0.0.0",
 		"start": "NODE_ENV=production node web-launcher-api",
 		"format": "npx @biomejs/biome check --write",
+		"deploy": "vercel --prod",
 		"vercel-build": "echo hello"
 	},
 	"keywords": [],
