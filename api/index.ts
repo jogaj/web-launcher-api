@@ -1,3 +1,3 @@
 import {ServerModel} from '../src/models/server';
 
-export default ServerModel;
+const server = new ServerModel();
