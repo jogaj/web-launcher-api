@@ -48,7 +48,6 @@ export async function login(req: Request, res: Response): Promise<void> {
 		const { username, password } = req.body;
 
 		const user = await UserModel.findOne({ where: { username: username } });
-
 		if (!user) throw new Error(MSG_INVALID_CREDENTIALS);
 
 		const passwordValid = await bcrypt.compare(
@@ -60,13 +59,14 @@ export async function login(req: Request, res: Response): Promise<void> {
 		// Generate token
 		const token = jwt.sign(
 			{
-				username: username,
+				username,
+				isAdmin: user.getDataValue('isAdmin')
 			},
 			process.env.SECRET_KEY || 'a!dsfaJHLbc',
 			{ expiresIn: '2h' },
 		);
 
-		res.status(200).json(token);
+		res.status(200).json({token, username, isAdmin: user.getDataValue('isAdmin')});
 	} catch (error: any) {
 		handleError(res, error, [MSG_INVALID_CREDENTIALS]);
 	}

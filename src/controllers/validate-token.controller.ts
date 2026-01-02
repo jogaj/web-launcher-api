@@ -43,5 +43,6 @@ export function authorize(req: Request, res: Response) {
 	}
 
 	const verify = verifyFn(headerToken);
+	console.log(verify);
 	res.json({ data: verify });
 }

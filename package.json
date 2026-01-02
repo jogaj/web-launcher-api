@@ -5,8 +5,8 @@
 	"scripts": {
 		"typescript": "tsc --watch",
 		"typescript-prod": "tsc",
-		"dev": "nodemon dist/index.js",
-		"dev-remote": "nodemon dist/index.js --host 0.0.0.0",
+		"dev": "nodemon dist/api/index.js",
+		"dev-remote": "nodemon dist/api/index.js --host 0.0.0.0",
 		"start": "NODE_ENV=production node web-launcher-api",
 		"format": "npx @biomejs/biome check --write",
 		"deploy": "vercel --prod",
